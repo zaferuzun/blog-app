@@ -3,12 +3,13 @@ import React, { useState } from 'react'
 const BlogForm = (props) => {
 
 
-    const [title,setTitle] = useState('');
-    const [description,setDescription] = useState('');
+    const [title,setTitle] = useState(props.title!=undefined?props.title:'');
+    const [description,setDescription] = useState(props.description!=undefined?props.description:'');
 
 
     const onSubmitEvent=(e)=>{
         e.preventDefault();
+        console.log(title, description);
         props.onSubmit({
             title:title,
             description:description,

@@ -6,7 +6,7 @@ const BlogDetails = () => {
   const { id } = useParams(); // ← URL'deki :id buraya gelir
 
   const blog = useSelector((state) =>
-    state.blogs.find((b) => b.id === (id))
+    state.blogs.find((b) => b.id == id)
   );
 
   console.log(blog);

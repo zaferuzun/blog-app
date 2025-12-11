@@ -5,7 +5,7 @@ const BlogListItem = ({id,title,description}) => {
   return (
     <>
         <li>
-           Başlık: {title} - <Link to = {`/blogs/${id}`} >dasda</Link>
+           Başlık: {title} - <Link to = {`/blogs/${id}`} >Details</Link>  - <Link to = {`/blogs/edit/${id}`} >Edit</Link>
         </li>
         <li>
            Açıklama: {description} 
