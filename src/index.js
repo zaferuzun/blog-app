@@ -6,6 +6,7 @@ import AppRouter from './routers/AppRouter';
 import './index.css';
 import configureStore from './store/configureStore'
 import { addBlog,removeBlog,editBlog } from './actions/blogs';
+import { Provider } from 'react-redux';
 // import {v4 as uuid} from 'uuid';
 
 
@@ -170,9 +171,9 @@ store.dispatch(editBlog(blog1.blog.id,{title:'update title',description:'update 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <Provider store ={store}>
     <AppRouter />
-  </React.StrictMode>
+  </Provider>
 );
 
 

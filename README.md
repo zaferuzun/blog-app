@@ -75,3 +75,16 @@ https://redux.js.org/introduction/getting-started    Redux Core ile kütüphaney
 
 React için npm i redux ile kurulabilir.
 
+componentler içerisinde store erişebilmek için react redux kurmak gerek
+https://react-redux.js.org/tutorials/quick-start
+
+npm install react-redux
+
+import { Provider } from 'react-redux';
+component provider arasına alınır ve alınan tüm componentler store erişim hakkı saglanmış olur.
+
+İlgili componentte 
+
+import { connect } from 'react-redux'
+
+ile store erişelebilir.
