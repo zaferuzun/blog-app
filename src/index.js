@@ -13,10 +13,9 @@ const initialStore ={
   count:0
 }
 
-//set store
-//başlangıçta bir state bilgisi var bunu ortak bir store'da paylaşıyoruz. daha sonra bu bilgiyi getirmek ve degiştirmek için action methodları belirliyoruz.
-//bu methodlarla store içinde degişiklikler yapılıp state bilgisini dönüyor.
-const store = createStore((state = initialStore,action)=>{
+//REDUCERS
+//spesifik reducer tanımlaması,store içerisinde birden fazla reducer içerebilir
+const counterReducer = (state = initialStore,action)=>{
   switch(action.type){
     case"INCREMENT":
       return {
@@ -34,7 +33,13 @@ const store = createStore((state = initialStore,action)=>{
       return state;
   }
   return state;
-})
+}
+
+
+//set store
+//başlangıçta bir state bilgisi var bunu ortak bir store'da paylaşıyoruz. daha sonra bu bilgiyi getirmek ve degiştirmek için action methodları belirliyoruz.
+//bu methodlarla store içinde degişiklikler yapılıp state bilgisini dönüyor.
+const store = createStore(counterReducer);
 
 //dispatch her çalıştıgında çalışır
 store.subscribe(()=>{
@@ -46,6 +51,8 @@ store.subscribe(()=>{
 console.log(store.getState());
 
 //INCREMENT, DECREMENT, RESET => ACTIONS (Object)
+
+//DISPATCH 
 store.dispatch({
   type:"INCREMENT"
 })
@@ -59,9 +66,7 @@ console.log(store.getState());//count 2
 
 
 
-//DISPATCH 
 
-//REDUCERS
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
