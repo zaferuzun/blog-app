@@ -88,3 +88,5 @@ component provider arasına alınır ve alınan tüm componentler store erişim 
 import { connect } from 'react-redux'
 
 ile store erişelebilir.
+
+connect yerine useSelector de kullanılır ve daha temiz yazımı var gibi duruyor.
