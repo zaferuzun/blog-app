@@ -68,3 +68,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+State bilgilerini tek bir yerden yönetmek için Redux kütüphanesini kullacanagız. 
+https://redux.js.org/introduction/getting-started    Redux Core ile kütüphaneyi diger javascript uygulamalarında kullanabilir.
+
+React için npm i redux ile kurulabilir.
+
