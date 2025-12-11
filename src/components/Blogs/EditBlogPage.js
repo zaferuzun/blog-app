@@ -1,6 +1,6 @@
 import React from 'react'
 import BlogForm from './BlogForm'
-import { editBlog } from '../../actions/blogs'
+import { editBlog, removeBlog } from '../../actions/blogs'
 import { useSelector,useDispatch } from 'react-redux';
 import { useParams,useNavigate } from 'react-router-dom'
 
@@ -21,6 +21,10 @@ const EditBlogPage = (props) => {
             dispatch(editBlog(blogRedux.id,blog));
             navigate('/blogs');
         }}/>
+
+        <button onClick={()=> {
+            dispatch(removeBlog(blogRedux.id))
+            navigate('/blogs')}}>Kaydı Sil</button>
     </div>
   )
 }

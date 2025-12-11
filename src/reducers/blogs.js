@@ -9,7 +9,7 @@ const blogState= [{
   }];
 
 const blogReducer = (state=blogState,action ) =>{
-
+    console.log(action);
   switch (action.type){
     case "ADD_BLOG":
       return [

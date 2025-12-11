@@ -90,3 +90,6 @@ import { connect } from 'react-redux'
 ile store erişelebilir.
 
 connect yerine useSelector de kullanılır ve daha temiz yazımı var gibi duruyor.
+
+Redux devtools
+https://github.com/zalmoxisus/redux-devtools-extension

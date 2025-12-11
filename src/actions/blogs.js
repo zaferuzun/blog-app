@@ -11,9 +11,9 @@ export const addBlog=({title='',description='açıklama yok',dateAdded=0})=>({
   }
 })
 
-export const removeBlog=({id})=>({
+export const removeBlog=(id)=>({
   type:"REMOVE_BLOG",
-  id:id
+  id
 })
 
 export const editBlog=(id,updates)=>({
